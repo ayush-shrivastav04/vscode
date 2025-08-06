@@ -1,0 +1,105 @@
+{
+  "name": "webview-react-integrated",
+  "displayName": "Webview React Integrated",
+  "description": "Built-in React webview extension with routing and communication",
+  "version": "1.0.0",
+  "publisher": "vscode",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "vscode",
+    "webview",
+    "react",
+    "built-in"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/src/extension.js",
+  "browser": "./out/src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "webview-react.open",
+        "title": "Open React Webview",
+        "category": "Integrated Webview"
+      },
+      {
+        "command": "webview-react.sendMessage",
+        "title": "Send Message to Webview",
+        "category": "Integrated Webview"
+      }
+    ],
+    "configuration": {
+      "title": "Integrated Webview React",
+      "properties": {
+        "webviewReact.userApiGender": {
+          "type": "string",
+          "default": "male",
+          "enum": [
+            "male",
+            "female"
+          ],
+          "enumDescriptions": [
+            "Fetching user information with gender of male",
+            "Fetching user information with gender of female"
+          ]
+        },
+        "webviewReact.autoOpen": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically open webview on VSCode startup"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "npm-run-all compile:*",
+    "compile:extension": "tsc -p ./",
+    "compile:view": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --mode development",
+    "compile:bundle": "node build-bundle-string.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:extension": "tsc -watch -p ./",
+    "watch:view": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --watch --mode development",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "@types/react": "^17.0.1",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/vscode": "^1.52.0",
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "@typescript-eslint/parser": "^4.9.0",
+    "cross-env": "^10.0.0",
+    "css-loader": "^5.0.1",
+    "eslint": "^7.15.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.1.3",
+    "npm-run-all": "^4.1.5",
+    "path-browserify": "^1.0.1",
+    "prettier": "^2.2.1",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.15",
+    "typescript": "^4.1.2",
+    "vscode-test": "^1.4.1",
+    "webpack": "^5.21.1",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0"
+  }
+}
