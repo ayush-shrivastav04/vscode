@@ -81,6 +81,23 @@
 				},
 				"publisherDisplayName": "Microsoft"
 			}
+		},
+		{
+			"name": "kilocode.kilo-code",
+			"version": "4.65.2",
+			"sha256": "6d31aa0c5f50b205b398060d4ca00b1a0c50767e98a5842313f913e6539facd8",
+			"repo": "https://github.com/ayush-shrivastav04/kilocode",
+			"vsix": "build/builtin/extensions/kilo-code-4.65.2.vsix",
+			"metadata": {
+				"id": "0f59e29d-3ee8-41fe-80f7-4c7d3d054e63",
+				"publisherId": {
+					"publisherId": "bcb231b4-a896-46a9-b0c3-44759e69fb9e",
+					"publisherName": "kilocode",
+					"displayName": "%extension.displayName%",
+					"flags": "verified"
+				},
+				"publisherDisplayName": "%extension.displayName%"
+			}
 		}
 	]
 }
