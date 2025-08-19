@@ -241,7 +241,14 @@ function packageTask(platform, arch, sourceFolderName, destinationFolderName, op
 			return !set.has(platform);
 		}).map(ext => `!.build/extensions/${ext.name}/**`);
 
-		const extensions = gulp.src(['.build/extensions/**', ...platformSpecificBuiltInExtensionsExclusions], { base: '.build', dot: true });
+		// Copy built-in extensions from .build/builtInExtensions to .build/extensions so VSCode can recognize them
+		const builtInExtensionsStream = gulp.src('.build/builtInExtensions/**', { base: '.build/builtInExtensions', dot: true })
+			.pipe(rename(function (path) { path.dirname = `extensions/${path.dirname}`; }));
+
+		const extensions = es.merge(
+			gulp.src(['.build/extensions/**', 'build/builtin/extensions/**', ...platformSpecificBuiltInExtensionsExclusions], { base: '.', dot: true }),
+			builtInExtensionsStream
+		);
 
 		const sources = es.merge(src, extensions)
 			.pipe(filter(['**', '!**/*.{js,css}.map'], { dot: true }));
