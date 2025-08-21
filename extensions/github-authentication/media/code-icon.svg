@@ -1,1 +1,13 @@
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><style>.st0{fill:#f6f6f6;fill-opacity:0}.st1{fill:#fff}.st2{fill:#167abf}</style><path class="st0" d="M1024 1024H0V0h1024v1024z"/><path class="st1" d="M1024 85.333v853.333H0V85.333h1024z"/><path class="st2" d="M0 85.333h298.667v853.333H0V85.333zm1024 0v853.333H384V85.333h640zm-554.667 160h341.333v-64H469.333v64zm341.334 533.334H469.333v64h341.333l.001-64zm128-149.334H597.333v64h341.333l.001-64zm0-149.333H597.333v64h341.333l.001-64zm0-149.333H597.333v64h341.333l.001-64z"/></svg>
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#FFFFFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="256" cy="256" r="164" stroke-width="28"/>
+    <path d="M160 380 L256 140 L352 380" stroke-width="40"/>
+    <line x1="208" y1="300" x2="304" y2="300" stroke-width="22"/>
+    <g stroke-width="20">
+      <line x1="122" y1="118" x2="170" y2="118"/><line x1="122" y1="118" x2="122" y2="166"/>
+      <line x1="390" y1="118" x2="342" y2="118"/><line x1="390" y1="118" x2="390" y2="166"/>
+      <line x1="122" y1="394" x2="170" y2="394"/><line x1="122" y1="394" x2="122" y2="346"/>
+      <line x1="390" y1="394" x2="342" y2="394"/><line x1="390" y1="394" x2="390" y2="346"/>
+    </g>
+  </g>
+</svg>
