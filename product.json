@@ -89,6 +89,23 @@
 				},
 				"publisherDisplayName": "Microsoft"
 			}
+		},
+		{
+			"name": "oacode.oa-code",
+			"version": "4.79.1",
+			"sha256": "12e38fb66b6be187f2a64161a191da53587813e50833767483116a667e384c25",
+			"repo": "https://github.com/Oa-Org/oacode",
+			"vsix": "build/builtin/extensions/oa-code-4.79.1.vsix",
+			"metadata": {
+				"id": "6cac9d72-21b1-4b96-8052-ba362d2da810",
+				"publisherId": {
+					"publisherId": "ca4bd192-928c-4f6a-9517-1c66dc00d67f",
+					"publisherName": "oacode",
+					"displayName": "%extension.displayName%",
+					"flags": "verified"
+				},
+				"publisherDisplayName": "%extension.displayName%"
+			}
 		}
 	]
 }
